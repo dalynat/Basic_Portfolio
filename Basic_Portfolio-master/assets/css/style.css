@@ -11,7 +11,7 @@ h1 {
     text-align: center;
 }
 p {
-    color: #777777;
+    color: black;
     font-family:"Arial", "Helvetica Neue", Helvetica, sans-serif;
 }
 head {
@@ -30,7 +30,7 @@ head {
 /* Style the links inside the navigation bar */
 .topnav a {
     color: darkslategray;
-    text-align: center;
+    text-align: left center;
     padding: 17px;
     text-decoration: none;
     font-size: 20px;
@@ -38,8 +38,8 @@ head {
 
 
 .topnav a:hover {
-    background-color: darkcyan;
-    color: #cccccc;
+    background-color: rgb(187, 215, 213);
+    color: black;
 }
 
 
@@ -59,9 +59,17 @@ body {
     background-image: url("../images/bananas.png");
     background-repeat: repeat-x repeat-y;
 }
-
-.Portfolio{
-
+form{
+    text-align: center;
+}
+.text{
+    font-size: 20px;
+    text-align: left;
+}
+.longtext{
+    height: 200px;
+    font-size: 20px;
+    text-align: left;
 }
 
 article{
