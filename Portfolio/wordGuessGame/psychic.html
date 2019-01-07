@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+
+  </div>
+
+  <h3>Psychic Game</h3>
+
+  <h4>Right Guess</h4>
+  <p id="p1"> 0</p>
+
+  <h4>Wrong Guess</h4>
+  <p id="p2"> 0</p>
+
+  <h4></h4>
+  <p id="p3"> 0</p>
+
+  <script type="text/javascript">
+
+      var compPoint = 0;
+      var userPoint = 0;
+
+    
+    var computerChoices = ["a, b c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"];
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Alerts the key the user pressed (userGuess).
+      alert("User guess: " + userGuess);
+
+      
+      
+    
+
+
+      //Who wins?
+      if (userGuess === computerGuess) {
+        tie += 1;
+        alert("You tied the computer");
+      }
+      else if (userGuess === "r" && computerGuess === "s") {
+        userPoint += 1;
+        alert("User Won!");
+      }
+      else if (userGuess === "r" && computerGuess === "p") {
+        compPoint+= 1;
+        alert("Computer Won!");
+      }
+      else if (userGuess === "s" && computerGuess === "r") {
+        compPoint += 1;
+        alert("Computer Won!");
+      }
+      else if (userGuess === "s" && computerGuess === "p") {
+        userPoint += 1;
+        alert("User Won!");
+      }
+      else if (userGuess === "p" && computerGuess === "s") {
+        compPoint += 1;
+        alert("Computer Won!");
+      }
+      else if (userGuess === "p" && computerGuess === "r") {
+        userPoint += 1;
+        alert("User Won!");
+      }
+      
+      document.getElementById("p1").innerHTML = userPoint;
+      document.getElementById("p2").innerHTML = compPoint;
+      document.getElementById("p3").innerHTML = tie;
+
+
+      //    if(userGuess === computerGuess) {
+      //    var tie++;
+      //    }
+
+
+      // 
+
+
+
+
+    };
+  </script>
+
+</body>
+
+</html>
